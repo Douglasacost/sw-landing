@@ -1,34 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import Image from "./image"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <StyledHeader>
+    <Logo><Image /></Logo>
+  </StyledHeader>
 )
 
 Header.propTypes = {
@@ -38,5 +17,17 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+const Logo = styled.div`
+  height: 50px;
+  width: 180px;
+`
+
+const StyledHeader = styled.header`
+  background: white;
+  margin-bottom: 1.45rem;
+  height: 150px;
+  max-height: 150px;
+`
 
 export default Header
