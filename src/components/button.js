@@ -1,13 +1,13 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import { device, FontSize } from "../const/styleds"
 
-function Button({ text, variant }) {
+function Button({ text, variant, children }) {
     return (
-        <StyledButton>
-            {text}
+        <StyledButton variant={variant}>
+            {text || children}
         </StyledButton>
     )
 }
@@ -25,6 +25,15 @@ const StyledButton = styled.button`
     outline: inherit;
     padding: 0 20px;
     margin: 0 2vw;
+    ${props => props.variant === 'light' && css`
+        border: 1px solid #185F7F;
+        color: #185F7F;
+        background: transparent;
+        &:hover {
+            background: transparent linear-gradient(248deg, #1B92C8 0%, #2C3636 100%) 0% 0% no-repeat padding-box;
+            color: #FFFFFF;
+        }
+    `}
     transition: all 500ms ease;
     &:hover {
         box-shadow: 4px 14px 20px -18px rgba(0,0,0,0.75);

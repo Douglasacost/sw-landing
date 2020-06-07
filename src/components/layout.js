@@ -21,29 +21,31 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <BackgroundBox>
-        <StyledLayaut>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
+      <StyledLayaut>
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
           {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </StyledLayaut>
-      </BackgroundBox>
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </StyledLayaut>
     </>
   )
 }
 
 const StyledLayaut = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0 1.0875rem 1.45rem;
+  > main {
+    position: relative;
+    > div > div {
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 0 1.0875rem 1.45rem;
+    }
+    >div:first-child {
+      background-image: url("${Background}");
+    }
+  }
   `;
-
-const BackgroundBox = styled.div`
-  background-image: url("${Background}");
-`
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

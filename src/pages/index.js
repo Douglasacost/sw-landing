@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { GlobalStyle } from "../const/styleds"
 import Home from "./home"
+import Section from "./section"
 
 const IndexPage = () => (
   <>
@@ -10,6 +11,7 @@ const IndexPage = () => (
     <Layout>
       <SEO title="Home" />
       <Home />
+      <Section />
     </Layout>
   </>
 )

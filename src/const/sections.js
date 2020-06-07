@@ -4,23 +4,23 @@ export const SECTIONS_LIST = [
       isActive: true
     },
     {
-      name: 'Home',
+      name: 'About',
       isActive: false
     },
     {
-      name: 'Home',
+      name: 'Portafolio',
       isActive: false
     },
     {
-      name: 'Home',
+      name: 'Product',
       isActive: false
     },
     {
-      name: 'Home',
+      name: 'Career',
       isActive: false
     },
     {
-      name: 'Home',
+      name: 'Blog',
       isActive: false
     },
   ]

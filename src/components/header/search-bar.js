@@ -14,6 +14,7 @@ function SearchBar () {
 
 const InputBox = styled.div`
     height: 50px;
+    width: 20vw;
     display: flex;
     align-items: center;
     position: relative;
@@ -22,9 +23,10 @@ const InputBox = styled.div`
         font-size: 20px;
         opacity: 0.7;
         position: absolute;
-        left: 82%;
+        left: calc(100% - 40px);
     }
     input {
+        width: 100%;
         border: 1px solid #C6BAF8;
         border-radius: 4px;
         height: 49px;
