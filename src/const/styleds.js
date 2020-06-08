@@ -20,6 +20,12 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         src: local("Montserrat Regular"), url(${fonts.MontserratRegular}) format("truetype");
     }
+    @font-face {
+        font-family: "Montserrat Medium";
+        font-style: normal;
+        font-weight: normal;
+        src: local("Montserrat Medium"), url(${fonts.MontserratMedium}) format("truetype");
+    }
 `
 
 export const flexCenter = css`

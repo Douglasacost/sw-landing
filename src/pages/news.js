@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
@@ -8,12 +8,9 @@ import { flexCenter, Title } from "../const/styleds";
 import useNews from "../utils/useNews";
 import { isBetween } from "../utils/functions";
 
-const MOCK_NEWS = [1, 2, 3, 4, 5]
-
 const News = () => {
     const [value, setValue] = useState(0)
-    const [items, setItems] = useState([])
-    const [news, isLoading] = useNews()
+    const [items] = useNews([])
 
     const onChange = (newValue) => {
         if(newValue === 0 && value === 0) {
@@ -25,10 +22,6 @@ const News = () => {
             setValue(Math.min(newValue, items.length))
         })
     }
-
-    useEffect(() => {
-        !isLoading && news ? setItems(news) : setItems(MOCK_NEWS)
-    }, [isLoading])
 
     const isActive = (current = 0) => {
         const min = (value-1)
@@ -52,7 +45,7 @@ const News = () => {
                     infinite
                     centered
                 >
-                    {items.map((item, i) => {
+                    {items && items.map((item, i) => {
                         return (
                             <StyledSlide id={i} isActive={isActive(i)} key={i}>
                                 <img alt={item.title} className="new-image" src={item.urlToImage} />

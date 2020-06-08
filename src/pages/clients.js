@@ -54,8 +54,9 @@ const ImageContainer = styled.div`
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 10px 24px #99999933;
     border-radius: 8px;
-    flex: 0 1 25%;
+    flex: 0 1 26.5%;
     transition: all 500ms ease;
+    cursor: pointer;
     &:hover {
         filter: invert(1);
         transform: scale(0.9);
@@ -69,7 +70,7 @@ const ImageContainer = styled.div`
     > div {
         margin-top: 20px;
         align-self: center;
-        width: 62%;
+        width: 65%;
     }
     .mobile {
         width: 22%;

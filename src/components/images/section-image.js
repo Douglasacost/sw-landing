@@ -33,7 +33,7 @@ const SectionImage = ({ image }) => {
     }
   `)
   
-  return <Img fluid={data[image].childImageSharp.fluid} />
+  return <Img fluid={data[image] && data[image].childImageSharp.fluid} />
 }
 
 export default SectionImage

@@ -68,7 +68,7 @@ const Logo = ({ type = 'main', ...rest }) => {
     }
   `)
 
-  return <Img fluid={data[type].childImageSharp.fluid} {...rest} />
+  return <Img fluid={data[type] && data[type].childImageSharp.fluid} {...rest} />
 }
 
 export default Logo

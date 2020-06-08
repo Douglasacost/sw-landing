@@ -6,18 +6,23 @@ import Home from "./home"
 import Section from "./section"
 import News from "./news"
 import Clients from "./clients"
+import Comments from "./comments"
+import { StateProvider } from "../context/store"
 
 const IndexPage = () => (
   <>
-    <GlobalStyle/>
-    <Layout>
-      <SEO title="Home"/>
-      <Home/>
-      <Section article={0}/>
-      <Section article={1}/>
-      <News/>
-      <Clients/>
-    </Layout>
+    <StateProvider>
+      <GlobalStyle />
+      <Layout>
+        <SEO title="Home" />
+        <Home />
+        <Section article={0} />
+        <Section article={1} />
+        <News />
+        <Clients />
+        <Comments />
+      </Layout>
+    </StateProvider>
   </>
 )
 

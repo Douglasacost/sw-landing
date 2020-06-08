@@ -10,8 +10,8 @@ const Section = ({ article }) => {
         <StyledSection article={article}>
             <div className="main">
                 <div>
-                    <p className="title"  dangerouslySetInnerHTML={{ __html: ARTICLES[article].title }}/>
-                    <p className="content" dangerouslySetInnerHTML={{ __html: ARTICLES[article].content }}/>
+                    <p className="title"  dangerouslySetInnerHTML={{ __html: ARTICLES[article] && ARTICLES[article].title }}/>
+                    <p className="content" dangerouslySetInnerHTML={{ __html: ARTICLES[article] && ARTICLES[article].content }}/>
                     {article === 0 && (<Button variant="light">Know more</Button>)}
                 </div>
                 <ImageContainer>
