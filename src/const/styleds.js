@@ -14,6 +14,12 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: normal;
         src: local("Poppins Regular"), url(${fonts.PoppinsRegular}) format("truetype");
     }
+    @font-face {
+        font-family: "Montserrat Regular";
+        font-style: normal;
+        font-weight: normal;
+        src: local("Montserrat Regular"), url(${fonts.MontserratRegular}) format("truetype");
+    }
 `
 
 export const flexCenter = css`
@@ -60,4 +66,10 @@ font-size: 14px;
 @media ${device.desktop} {
     font-size: 18px;
 }
+`
+
+export const RemoveLayoutRules = css`
+    margin: 0;
+    max-width: auto;
+    padding: 0;
 `

@@ -8,7 +8,7 @@ const homeMessage = "a brand new way to see the world"
 
 const Home = () => (
     <div>
-        <StyledHome>
+        <StyledHome className="main">
             <ImageContainer><HomeImage /></ImageContainer>
             <p>{homeMessage}</p>
             <ButtonContainer>

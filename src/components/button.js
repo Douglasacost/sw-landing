@@ -1,8 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import { device, FontSize } from "../const/styleds"
+import { FontSize } from "../const/styleds"
 
 function Button({ text, variant, children }) {
     return (

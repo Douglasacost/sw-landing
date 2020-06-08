@@ -4,14 +4,17 @@ import SEO from "../components/seo"
 import { GlobalStyle } from "../const/styleds"
 import Home from "./home"
 import Section from "./section"
+import News from "./news"
 
 const IndexPage = () => (
   <>
-    <GlobalStyle />
+    <GlobalStyle/>
     <Layout>
-      <SEO title="Home" />
-      <Home />
-      <Section />
+      <SEO title="Home"/>
+      <Home/>
+      <Section article={0}/>
+      <Section article={1}/>
+      <News/>
     </Layout>
   </>
 )

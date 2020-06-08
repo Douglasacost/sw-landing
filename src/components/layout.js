@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
 const StyledLayaut = styled.div`
   > main {
     position: relative;
-    > div > div {
+    > div > .main {
       margin: 0 auto;
       max-width: 960px;
       padding: 0 1.0875rem 1.45rem;
