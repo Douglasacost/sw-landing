@@ -71,7 +71,7 @@ const StyledSection = styled.div`
         }
     }    
     height: 55vh;
-    width: 100vw;
+    width: 99vw;
     margin: 4em 0;
 `
 

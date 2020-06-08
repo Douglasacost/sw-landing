@@ -73,3 +73,11 @@ export const RemoveLayoutRules = css`
     max-width: auto;
     padding: 0;
 `
+
+export const Title = css`
+    font: normal 43px/55px "Montserrat Regular";
+    color: #222222;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 0.5em;
+`

@@ -36,9 +36,14 @@ const Layout = ({ children }) => {
 const StyledLayaut = styled.div`
   > main {
     position: relative;
-    > div > .main {
+    .main {
       margin: 0 auto;
       max-width: 960px;
+      padding: 0 1.0875rem 1.45rem;
+    }
+    .main-wide {
+      margin: 0 auto;
+      max-width: 1200px;
       padding: 0 1.0875rem 1.45rem;
     }
     >div:first-child {

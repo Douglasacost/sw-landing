@@ -11,13 +11,11 @@ function useNews() {
 
     const fetchNew = async () => {
         try {
-            const response = await newsapi({
-                category: 'technology',
+            const response = await newsapi.topHeadlines({
                 language: 'en',
                 country: 'us'
             })    
-            setNews(response)
-            debugger
+            setNews(response.articles)
             setIsLoading(false)
         } catch (error) {
             setHaveErrors(true)
@@ -26,8 +24,8 @@ function useNews() {
     }
 
     useEffect(() => {
-        setTimeout(() => fetchNew(), (haveErrors ? 30000: 0))
-    }, [haveErrors])
+        fetchNew()
+    }, [])
 
     return [news, isLoading, haveErrors]
 }

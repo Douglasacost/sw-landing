@@ -36,3 +36,5 @@ export const ARTICLES = [
     content: 'Shokworks team provide solutions and guidance to every project, taking the project vision to high level.'
   }, 
 ]
+
+export const LOGOS = ['immersity', 'ipass', 'kinesis', 'mexperiencia', 'mobile', 'panama']

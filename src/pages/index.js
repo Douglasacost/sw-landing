@@ -5,6 +5,7 @@ import { GlobalStyle } from "../const/styleds"
 import Home from "./home"
 import Section from "./section"
 import News from "./news"
+import Clients from "./clients"
 
 const IndexPage = () => (
   <>
@@ -15,6 +16,7 @@ const IndexPage = () => (
       <Section article={0}/>
       <Section article={1}/>
       <News/>
+      <Clients/>
     </Layout>
   </>
 )
