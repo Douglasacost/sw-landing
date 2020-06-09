@@ -46,6 +46,9 @@ const StyledLayaut = styled.div`
       max-width: 1200px;
       padding: 0 1.0875rem 1.45rem;
     }
+    .with-background {
+      background-image: url("${Background}");
+    }
     >div:first-child {
       background-image: url("${Background}");
     }

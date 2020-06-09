@@ -8,6 +8,7 @@ import News from "./news"
 import Clients from "./clients"
 import Comments from "./comments"
 import { StateProvider } from "../context/store"
+import Form from "./form"
 
 const IndexPage = () => (
   <>
@@ -21,6 +22,7 @@ const IndexPage = () => (
         <News />
         <Clients />
         <Comments />
+        <Form/>
       </Layout>
     </StateProvider>
   </>

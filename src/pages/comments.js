@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useState, useEffect } from "react"
 import styled, { css } from "styled-components"
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
@@ -52,7 +52,6 @@ const Comments = () => {
     }, [])
 
     useEffect(() => {
-        console.log(state.comments)
         setItems(state.comments)
         setValue(5)
     }, [state])
@@ -86,7 +85,7 @@ const Comments = () => {
                                     <img src={RightQuote} alt="quote"/>
                                 </div>
                                 <div className="comment-name">{item.user.name}</div>
-                                <div className="comment-from">{item.user.name}</div>
+                                <div className="comment-from">{item.user.company.name}</div>
                             </StyledSlide>
                         )
                     })}
@@ -144,12 +143,14 @@ const StyledSlide = styled.div`
         letter-spacing: 0px;
         opacity: 1;
         ${props => !props.isActive && css`
+            display: none;
             opacity: 0;
         `}
     }
     .comment-image {
         transition: all 800ms ease;
         opacity: 0;
+        display: block;
         ${props => props.shouldShow && css`
             opacity: 1;
         `}
@@ -173,7 +174,7 @@ const StyledSlide = styled.div`
     .comment-body {
         display: flex;
         align-items: center;
-        font: normal 24px/34px 'Montserrat Regular';
+        font: normal min(1.4vw, 24px)/34px 'Montserrat Regular';
         color: #333333;
         letter-spacing: 0.48px;
         width: 200%;

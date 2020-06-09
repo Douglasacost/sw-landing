@@ -1,5 +1,4 @@
-import React, { createContext, useReducer, useState, useEffect } from 'react';
-import useJsonApi from '../utils/useJsonApi';
+import React, { createContext, useReducer } from 'react';
 
 const initialState = {
     comments: [],

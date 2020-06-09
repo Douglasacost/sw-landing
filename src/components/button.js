@@ -2,9 +2,9 @@ import React from "react"
 import styled, { css } from "styled-components"
 import { FontSize } from "../const/styleds"
 
-function Button({ text, variant, children }) {
+function Button({ text, variant, children, ...rest }) {
     return (
-        <StyledButton variant={variant}>
+        <StyledButton variant={variant} {...rest}>
             {text || children}
         </StyledButton>
     )
@@ -36,6 +36,14 @@ const StyledButton = styled.button`
     &:hover {
         box-shadow: 4px 14px 20px -18px rgba(0,0,0,0.75);
     }
+    &:disabled,
+    &[disabled]{
+        pointer-events: none;
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+    }
+
     ${FontSize}
 `
 

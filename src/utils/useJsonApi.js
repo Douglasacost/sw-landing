@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { store, StateProvider } from '../context/store';
+import { store } from '../context/store';
 import { jsonService } from './jsonService';
 
 function useJsonApi() {
@@ -7,11 +7,16 @@ function useJsonApi() {
     const [haveErrors, setHaveErrors] = useState(false)
     const { dispatch, state } = useContext(store);
 
-    const makeFetch = async () => {
+    const makeFetch = async (data = null) => {
         setIsLoading(true)
         try {
-            const posts = await jsonService.getFirstTen()
-            return dispatch({ type: 'UPDATE_POSTS', payload: posts })
+            if (data) {
+                await jsonService.submitPost(data)
+            } else {
+                const posts = await jsonService.getFirstTen()
+                dispatch({ type: 'UPDATE_POSTS', payload: posts })
+            }
+            setIsLoading(false)
         } catch (error) {
             setHaveErrors(true)
             setIsLoading(false)
@@ -26,7 +31,7 @@ function useJsonApi() {
     }, [isLoading, haveErrors])
 
     const fetchPosts = () => makeFetch()
-    const submitPost = (data) => makeFetch()
+    const submitPost = (data) => makeFetch(data)
 
     const actions = {
         fetchPosts,
