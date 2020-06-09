@@ -37,7 +37,7 @@ const Form = () => {
                         <Input onChange={handleChange} name="title" placeholder="test placeholder" label="Title" type="text" />
                         <Input onChange={handleChange} name="body" placeholder="very long text... so long..." label="Content" type="textarea" />
                         <Padding />
-                        <Button disabled={state.isLoading} variant="light" type="submit">Submit</Button>
+                        <Button disabled={state && state.isLoading} variant="light" type="submit">Submit</Button>
                     </form>
                 </FormContainer>
                 <div className="image-container">
