@@ -9,6 +9,7 @@ import Clients from "./clients"
 import Comments from "./comments"
 import { StateProvider } from "../context/store"
 import Form from "./form"
+import Footer from "./footer"
 
 const IndexPage = () => (
   <>
@@ -23,6 +24,7 @@ const IndexPage = () => (
         <Clients />
         <Comments />
         <Form/>
+        <Footer/>
       </Layout>
     </StateProvider>
   </>
