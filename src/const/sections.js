@@ -38,3 +38,24 @@ export const ARTICLES = [
 ]
 
 export const LOGOS = ['immersity', 'ipass', 'kinesis', 'mexperiencia', 'mobile', 'panama']
+
+export const FOOTER = [
+  {
+    title: "Contact Us",
+    links: ["+(1) 824-5428", "Miami, United States", "yfuentes@shokworks.io"],
+    icon: true
+  },
+  {
+    title: "Our Company",
+    links: ["About", "Product", "Portafolio", "Career", "Blog"],
+    
+  },
+  {
+    title: "Social Contacts",
+    links: ["Facebook", "Linked In", "Youtube", "Vimeo", "Skype"],
+  },
+  {
+    title: "Address",
+    links: ["Internet Systems Consortium, Inc. 950 Charter Street Redwood City, CA USA."],
+  }
+]
