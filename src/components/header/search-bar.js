@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 function SearchBar () {
     return (
         <InputBox>
-            <input placeholder="Search Here" />
+            <input aria-label="input" placeholder="Search Here" />
             <FontAwesomeIcon icon={faSearch}/>
         </InputBox>
     )

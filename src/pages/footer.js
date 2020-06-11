@@ -21,21 +21,21 @@ const Footer = () => {
         <StyledFooter>
             <Logo className="logo" />
             <StyledContent>
-                {FOOTER.map(item => {
+                {FOOTER.map((item, i) => {
                     return (
-                        <div>
+                        <div key={i}>
                             <p>{item.title}</p>
                             {item.links.map(link => {
                                 return (
-                                    <p>{link}</p>
+                                    <p key={link}>{link}</p>
                                 )
                             })}
                             {item.title === "Address" && (
                                 <IconsContent>
                                     <p>Follow Us</p>
                                     <div>
-                                        {ICONS.map(item => (
-                                            <div className={item.icon}>
+                                        {ICONS.map((item, j) => (
+                                            <div key={j} className={item.icon}>
                                                 <img alt={item.icon} src={item.path} />
                                             </div>
                                         ))}
