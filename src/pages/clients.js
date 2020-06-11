@@ -50,6 +50,7 @@ const ImageContainer = styled.div`
     `}
     width: 15.9vw;
     height: 15.5vw;
+    min-height: 220px;
     margin: 20px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 10px 24px #99999933;

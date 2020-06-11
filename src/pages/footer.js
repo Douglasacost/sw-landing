@@ -52,6 +52,7 @@ const Footer = () => {
 }
 
 const IconsContent = styled.div`
+    position: relative;
     > p:first-child {
         text-align: left;
         font: normal 18px/27px "Poppins Medium";
@@ -61,6 +62,7 @@ const IconsContent = styled.div`
         cursor: auto;
     }
     > div{
+        position: absolute;
         display: flex;
         justify-content: space-between;
         > div {

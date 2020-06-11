@@ -91,6 +91,7 @@ const StyledSlide = styled.div`
     margin-top: 10px;
     width: 22vw;
     height: 26.5vw;
+    min-height: 60vh;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 10px 30px #99999933;
     border-radius: 8px;
@@ -98,6 +99,7 @@ const StyledSlide = styled.div`
     padding: 0 1.5em;
     margin-bottom: 2em !important;
     overflow: hidden;
+    will-change: transform; 
     transition: all 500ms ease;
     &:hover {
         box-shadow: 4px 5px 10px #99999933;
@@ -107,6 +109,7 @@ const StyledSlide = styled.div`
         transform: scale(0.9);
     `}
     > * {
+        will-change: transform; 
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -153,6 +156,7 @@ const NewsContainer = styled.div`
         width: 118vw;
     }
     .BrainhubCarouselItem {
+        will-change: transform;
         width: unset !important;
         min-width: unset !important;
     }

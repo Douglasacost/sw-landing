@@ -105,7 +105,7 @@ const ButtonsContainer = styled.div`
     margin: auto;
     left: 0;
     right: 0;
-    top: 85%;
+    top: 88%;
 `
 
 const ArrowButton = styled.div`
@@ -131,7 +131,9 @@ const StyledSlide = styled.div`
         width: 20vw;
     `}
     height: 30.5vw;
+    min-height: 65vh;
     > * {
+        will-change: transform;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 3;
