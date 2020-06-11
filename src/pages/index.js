@@ -10,6 +10,9 @@ import Comments from "./comments"
 import { StateProvider } from "../context/store"
 import Form from "./form"
 import Footer from "./footer"
+import { config } from "@fortawesome/fontawesome-svg-core"
+import 'node_modules/@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
 
 const IndexPage = () => (
   <>
